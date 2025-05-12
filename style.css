@@ -22,10 +22,17 @@ h1{
 
 .container{
     width: 1440px !important;
+    min-width: 320px !important;
+}
+
+@media (max-width: 576px) {
+    .container, .container-sm {
+        width: 100% !important;
+    }
 }
 
 .container-fluid{
-  padding: 50px;
+
 }
 
 .header{
@@ -47,14 +54,14 @@ h1{
     padding: 10px 15px;
 }
 
-@media(max-width: 990px) {
+@media(max-width: 991px) {
   .header-up{
     border-bottom: none;
   }
 }
 
 .header-up-link{
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0 30px;
 }
 
@@ -73,6 +80,10 @@ h1{
     font-weight: 700;
     margin: 0 6px !important;
     white-space: nowrap;
+}
+
+.navbar{
+  min-width: 320px !important;
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
@@ -122,13 +133,51 @@ h1{
     display: flex;
 }
 
+@media (min-width: 991px) and (max-width: 1100px){
+  .media-item{
+    margin: 4px !important;
+  }
+
+  .header-up-media svg{
+    width: 30px;
+    height: 30px;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 768px){
+  .header-mobile-title{
+    margin-left: 50px !important;
+    font-size: 18px !important;
+
+  }
+}
+
+@media (max-width: 500px){
+  .header-mobile-title{
+    margin: 9px 10px !important;
+    font-size: 15px !important;
+
+  }
+}
+
+@media (max-width: 400px){
+  .header-mobile-title{
+    font-size: 13px !important;
+    margin: 9px 0 ;
+  }
+}
+
 .col-down-address{
     font-size: 15px;
     margin-left: 5px;
+    white-space: nowrap;
 }
+
 
 .col-down-phone{
     margin-left: 5px;
+    white-space: nowrap;
 }
 
 .media-item{
@@ -1069,10 +1118,12 @@ th{
 .offcanvas{
   background-color: #3a3330;
   border-right: 5px solid gray !important;
+  width: 40% !important;
 }
 
 .offcanvas-body{
   padding: 0;
+  width: 100%;
 }
 
 .mobile-nav{
